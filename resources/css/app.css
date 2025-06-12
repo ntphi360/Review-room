@@ -2,10 +2,45 @@
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../**/*.vue";
 
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@layer components {
+    .label {
+        @apply block mb-1 text-gray-500 dark:text-gray-300 font-medium
+    }
+    .input {
+        @apply block w-full p-2 rounded-md shadow-sm border border-gray-300 dark:border-gray-600 text-gray-500
+    }
+    .btn-primary {
+        @apply bg-indigo-600 hover:bg-indigo-500 text-white font-medium p-2 rounded-md cursor-pointer
+    }
+    .input-error {
+        @apply text-sm text-red-500 dark:text-red-400
+    }
+    .input-filter-l {
+        @apply placeholder:text-gray-400 dark:placeholder:text-gray-600 
+               border border-gray-200 dark:border-gray-700 
+               rounded-md rounded-r-none 
+               text-sm font-medium text-gray-600 dark:text-gray-400 
+               dark:bg-gray-800 px-3 py-2;
+    } 
+    .input-filter-r {
+        @apply placeholder:text-gray-400 dark:placeholder:text-gray-600 
+               border border-l-0 border-gray-200 dark:border-gray-700 
+               rounded-md rounded-l-none 
+               text-sm font-medium text-gray-600 dark:text-gray-400 
+               dark:bg-gray-800 px-3 py-2;
+    }
+    .btn-normal {
+        @apply bg-gray-600 hover:bg-gray-500 text-white font-medium p-2 rounded-md
+    }.btn-outline {
+        @apply p-2 rounded-md border shadow-sm border-gray-300 dark:border-gray-800 hover:border-gray-400 hover:bg-gray-50 dark:hover:border-gray-700 dark:hover:bg-gray-800
+    }
 }
