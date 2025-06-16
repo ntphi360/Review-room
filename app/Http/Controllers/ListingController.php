@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ListingRequest;
 use App\Models\Listing;
 use Illuminate\Http\Request;
 
@@ -22,15 +23,20 @@ class ListingController extends Controller
      */
     public function create()
     {
-        //
+        return inertia('Listing/Create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ListingRequest $request)
     {
-        //
+        $data = $request->validated();
+        $listing = Listing::create($data);
+        return redirect()->route('listing.index')
+                ->with('success','Listing was created!');
+    
+        
     }
 
     /**
