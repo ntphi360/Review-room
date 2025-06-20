@@ -1,7 +1,9 @@
-<template>  
-   <div v-if="flashSuccess" class="success">
+<template>
+  <Link href="/listing">Listings</Link> &nbsp;
+  <Link href="/listing/create">New Listings</Link>  
+  <div v-if="flashSuccess" class="success">
     {{ flashSuccess }}
-   </div>
+  </div>
   <slot>Default</slot>
 </template>
 
