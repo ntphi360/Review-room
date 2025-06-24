@@ -2,7 +2,7 @@
 import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/vue3';
 import MainLayout from './Layouts/MainLayout.vue';
-// import { ZiggyVue } from 'ziggy';
+import { ZiggyVue } from 'ziggy';
 
 
 
@@ -24,7 +24,7 @@ createInertiaApp({
   setup({ el, App, props, plugin }) {
     createApp({ render: () => h(App, props) })
       .use(plugin)
-      // .use(ZiggyVue)
+      .use(ZiggyVue)
       .mount(el)
   },
 })
