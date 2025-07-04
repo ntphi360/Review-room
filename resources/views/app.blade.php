@@ -10,9 +10,10 @@
         <!-- Fonts -->
      
         <!-- Styles / Scripts -->        
-            @routes
-            @vite(['resources/css/app.css', 'resources/js/app.js'])
-            @inertiaHead
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" />
+        @routes
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @inertiaHead
         <!-- CSRF Token -->
       
     </head>
