@@ -47,7 +47,7 @@
             <div class="flex justify-between">
               <div>Interest paid</div>
               <div>
-                <Price:price="totalInterest" class="font-medium" />
+                <Price :price="totalInterest" class="font-medium" />
               </div>
             </div>
           </div>
