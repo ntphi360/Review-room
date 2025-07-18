@@ -11,5 +11,5 @@ Route::get('login' ,[AuthController::class,'create'])
     ->name('login');
 Route::post('login' ,[AuthController::class,'store'])
     ->name('login.store');
-Route::get('logout' ,[AuthController::class,'destroy'])
+Route::delete('logout' ,[AuthController::class,'destroy'])
     ->name('logout');

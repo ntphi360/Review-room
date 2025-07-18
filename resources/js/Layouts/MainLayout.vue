@@ -12,12 +12,14 @@
         <div v-if="user" class="flex items-center gap-4">
           <div class="text-sm text-gray-500">{{ user.name }}</div>
           <Link :href="route('listing.create')" class="bg-indigo-600 hover:bg-indigo-500 text-white p-2 rounded-md">+ New listing</Link>
-          <div>Logout</div>
+          <div>
+            <Link :href="route('logout')" method="delete" as="button" class="cursor-pointer">Logout</Link>
+          </div>
         </div>
         <div v-else>
           <Link :href="route('login')">Sign-in</Link>
         </div>
-       
+        
       </nav>
     </div>
   </header>
