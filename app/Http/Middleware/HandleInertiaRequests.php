@@ -39,11 +39,12 @@ class HandleInertiaRequests extends Middleware
             'flash' => [
                 'success' => $request->session()->get('success')
             ],
-            // 'user' => $request->user() ? [
-            //     'id' => $request->user()->id,
-            //     'name' => $request->user()->name,
-            //     'email' => $request->user()->email
-            // ] : null
+            // Use user method to get the currently authenticated user
+            'user' => $request->user() ? [
+                'id' => $request->user()->id,
+                'name' => $request->user()->name,
+                'email' => $request->user()->email
+            ] : null
         ]);
     }
 }
