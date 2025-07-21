@@ -16,12 +16,14 @@
             <Link :href="route('logout')" method="delete" as="button" class="cursor-pointer">Logout</Link>
           </div>
         </div>
-        <div v-else>
-          <Link :href="route('login')">Sign-in</Link>
+        <div v-else class="flex items-center gap-2">
+          <Link :href="route('user-account.create')">Register</Link>
+          <Link :href="route('login')">Sign-In</Link>
         </div>
       </nav>
     </div>
   </header>
+
   <main class="container mx-auto p-4 w-full">
     <div v-if="flashSuccess"
       class="mb-4 border rounded-md shadow-sm border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900 p-2">

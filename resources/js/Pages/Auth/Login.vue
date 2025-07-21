@@ -14,9 +14,9 @@
       <div class="mt-4">
         <button class="btn-primary w-full " type="submit">Login</button>
         <div class="mt-2 text-center">
-           <!-- <Link :href="route('user-account.create')" class="text-sm text-gray-500 hover:brightness-50"> -->
+           <Link :href="route('user-account.create')" class="text-sm text-gray-500 hover:brightness-50">
              Need an account? Click here
-           <!-- </Link> -->
+           </Link>
          </div>
       </div>
     </div>
