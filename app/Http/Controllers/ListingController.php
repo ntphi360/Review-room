@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ListingRequest;
 use App\Models\Listing;
+use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 
-class ListingController extends Controller
+class ListingController extends BaseController
 {
     /**
      * Display a listing of the resource.

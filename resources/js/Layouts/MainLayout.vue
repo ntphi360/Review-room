@@ -19,7 +19,6 @@
         <div v-else>
           <Link :href="route('login')">Sign-in</Link>
         </div>
-        
       </nav>
     </div>
   </header>

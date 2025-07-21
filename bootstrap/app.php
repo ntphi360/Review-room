@@ -19,12 +19,11 @@ return Application::configure(basePath: dirname(__DIR__))
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \Illuminate\Foundation\Http\Middleware\ValidateCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            // \Illuminate\Session\Middleware\AuthenticateSession::class,
             HandleInertiaRequests::class,
         ]);
-        // $middleware->validateCsrfTokens(except: [
-        //     '/logout'
-        // ]);
+        $middleware->validateCsrfTokens(except: [
+            '/logout'
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
