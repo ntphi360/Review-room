@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
             'name' => 'Phi Nguyen',
             'email' => 'preal360@gmail.com'
         ]);
-        Listing::factory()->count(20)->create();
+        Listing::factory()->count(20)->create([
+            'by_user_id' => 1,
+        ]);
     }
 }
