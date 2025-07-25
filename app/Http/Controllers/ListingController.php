@@ -33,13 +33,14 @@ class ListingController extends BaseController
     public function store(ListingRequest $request)
     {
         $data = $request->validated();
-        $listing = Listing::create($data);
+        $request->user()->listings()->create($data); //Asign by_user_id for listing
+        
         return redirect()->route('listing.index')
                 ->with('success','Listing was created!');
     
         
     }
-
+ 
     /**
      * Display the specified resource.
      */
