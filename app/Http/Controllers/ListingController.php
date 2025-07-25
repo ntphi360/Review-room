@@ -2,16 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ListingRequest;
 use App\Models\Listing;
-use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\ListingRequest;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Routing\Controller as BaseController;
 
 class ListingController extends BaseController
 {
+    use AuthorizesRequests;
     /**
      * Display a listing of the resource.
      */
+    public function __construct(){
+        $this->authorizeResource(Listing::class,'listing');
+    }
     public function index()
     {
         return inertia('Listing/Index',[
@@ -46,7 +52,7 @@ class ListingController extends BaseController
      */
     public function show(Listing $listing)
     {
-          return inertia('Listing/Show',[
+        return inertia('Listing/Show',[
             'listing' => $listing,
         ]);
     }
